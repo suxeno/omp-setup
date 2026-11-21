@@ -33,21 +33,21 @@ def copy_preserving(source, destination, backup_root):
 
 def main():
     home = Path.home()
-    if (home / ".omp").is_symlink() or (home / ".agents").is_symlink():
-        print("Refusing to restore through symlinked .omp or .agents directories.", file=sys.stderr)
+    if (home / ".omp").is_symlink():
+        print("Refusing to restore through a symlinked .omp directory.", file=sys.stderr)
         return 1
     stamp = tempfile.mkdtemp(prefix="omp-restore-", dir=home)
     backups = Path(stamp) / "backup"
     failed = False
     for source, destination in ((ROOT / "agent", home / ".omp" / "agent"),
-                                (ROOT / "skills", home / ".agents" / "skills")):
+                                (ROOT / "skills", home / ".omp" / "agent" / "skills")):
         try:
             copy_preserving(source, destination, backups)
         except OSError as error:
             print(f"Copy failed ({source}): {error}", file=sys.stderr)
             failed = True
     try:
-        copy_preserving(ROOT / "skill-lock.json", home / ".agents" / ".skill-lock.json", backups)
+        copy_preserving(ROOT / "skill-lock.json", home / ".omp" / "agent" / ".skill-lock.json", backups)
     except OSError as error:
         print(f"Copy failed (skill-lock.json): {error}", file=sys.stderr)
         failed = True
