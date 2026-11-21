@@ -13,9 +13,25 @@ Private backup of OMP settings, MCP servers, skills, extensions, and plugin meta
    ```
 
    Close OMP first. Existing files are backed up under `~/omp-restore-*/backup/`. Plugin installation requires internet access.
-   Skills restore to `~/.omp/agent/skills/`, not the shared `~/.agents/skills/` directory. Skill source metadata is kept at `~/.omp/agent/.skill-lock.json` for reference; OMP does not use it as its Skillshare lock.
 2. Start OMP, sign in with `/login`, and reconnect servers with `/mcp reauth <name>`.
 3. Check `/mcp list`, `/mcp test <name>`, and `omp plugin list`. Some plugins need separate sign-in or dependencies.
+
+## Restored locations
+
+| Item | Location on device |
+| --- | --- |
+| Backup repository | `~/omp-setup/` |
+| OMP settings | `~/.omp/agent/config.yml` |
+| MCP servers | `~/.omp/agent/mcp.json` |
+| LSP settings | `~/.omp/agent/lsp.json` |
+| Skills | `~/.omp/agent/skills/` |
+| Skill source metadata | `~/.omp/agent/.skill-lock.json` |
+| Local extension | `~/.omp/agent/extensions/` |
+| Installed plugins | `~/.omp/plugins/` |
+| Marketplace registry | `~/.omp/marketplaces.json` |
+| Replaced files | `~/omp-restore-*/backup/` |
+
+Skills are OMP-scoped; `~/.agents/skills/` is untouched. The skill source metadata is for reference, not an OMP Skillshare lock.
 
 **Security:** This restores `tools.approvalMode: yolo` (permissive tool approval). Review `agent/config.yml` before restoring.
 
