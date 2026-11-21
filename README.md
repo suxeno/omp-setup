@@ -4,8 +4,7 @@ Private backup of OMP settings, MCP servers, skills, extensions, and plugin meta
 
 ## Set up a new device
 
-1. Install Git, Python 3, OMP, and Node.js. Sign in with `gh auth login` and `gh auth setup-git`, or configure Git credentials another way.
-2. Clone and restore:
+1. Clone and restore:
 
    ```sh
    git clone https://github.com/suxeno/omp-setup.git ~/omp-setup
@@ -14,8 +13,8 @@ Private backup of OMP settings, MCP servers, skills, extensions, and plugin meta
    ```
 
    Close OMP first. Existing files are backed up under `~/omp-restore-*/backup/`. Plugin installation requires internet access.
-3. Start OMP, sign in with `/login`, and reconnect servers with `/mcp reauth <name>`.
-4. Check `/mcp list`, `/mcp test <name>`, and `omp plugin list`. Some plugins need separate sign-in or dependencies.
+2. Start OMP, sign in with `/login`, and reconnect servers with `/mcp reauth <name>`.
+3. Check `/mcp list`, `/mcp test <name>`, and `omp plugin list`. Some plugins need separate sign-in or dependencies.
 
 **Security:** This restores `tools.approvalMode: yolo` (permissive tool approval). Review `agent/config.yml` before restoring.
 
