@@ -1,0 +1,87 @@
+{
+  "version": 3,
+  "skills": {
+    "herdr": {
+      "source": "herdrdev/herdr",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/herdrdev/herdr.git",
+      "skillPath": "skills/herdr/SKILL.md",
+      "skillFolderHash": "67042ed7910d4177a9000e0679e78b0346060927",
+      "installedAt": "2026-10-05T18:33:53.334Z",
+      "updatedAt": "2026-10-05T18:33:53.334Z"
+    },
+    "find-skills": {
+      "source": "vercel-labs/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/skills.git",
+      "skillPath": "skills/find-skills/SKILL.md",
+      "skillFolderHash": "76a98a285cb0434f3d39e1a873823556330e398b",
+      "installedAt": "2026-10-05T18:33:59.557Z",
+      "updatedAt": "2026-10-05T18:33:59.557Z"
+    },
+    "ponytail": {
+      "source": "dietrichgebert/ponytail",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dietrichgebert/ponytail.git",
+      "skillPath": "skills/ponytail/SKILL.md",
+      "skillFolderHash": "cb6e53477eaf04e6daeca22feacb85f9ce20d40c",
+      "installedAt": "2026-10-06T11:23:39.240Z",
+      "updatedAt": "2026-10-06T11:23:39.240Z"
+    },
+    "caveman": {
+      "source": "juliusbrussee/caveman",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/juliusbrussee/caveman.git",
+      "skillPath": "skills/caveman/SKILL.md",
+      "skillFolderHash": "ce6b7ff0b692d2cd445989bf7e6ce74698aa9a57",
+      "installedAt": "2026-10-06T11:23:42.453Z",
+      "updatedAt": "2026-10-06T11:23:42.453Z"
+    },
+    "subagent-driven-development": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/obra/superpowers.git",
+      "skillPath": "skills/subagent-driven-development/SKILL.md",
+      "skillFolderHash": "98c875856cf40765616a4565f09b437f0c58992b",
+      "installedAt": "2026-10-26T17:04:32.546Z",
+      "updatedAt": "2026-10-26T17:04:32.546Z"
+    },
+    "systematic-debugging": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/obra/superpowers.git",
+      "skillPath": "skills/systematic-debugging/SKILL.md",
+      "skillFolderHash": "108961c080a6837ad8a188a553e593cc5e6df62d",
+      "installedAt": "2026-10-26T17:04:32.556Z",
+      "updatedAt": "2026-10-26T17:04:32.556Z"
+    },
+    "documentation-writer": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/documentation-writer/SKILL.md",
+      "skillFolderHash": "016d8040a3f91c8360b1003e74fbf29f34c283f5",
+      "installedAt": "2026-10-28T03:23:43.353Z",
+      "updatedAt": "2026-10-28T03:23:43.353Z"
+    }
+  },
+  "dismissed": {
+    "findSkillsPrompt": true
+  },
+  "lastSelectedAgents": [
+    "amp",
+    "cline",
+    "codex",
+    "cursor",
+    "droid",
+    "fx",
+    "gemini-cli",
+    "github-copilot",
+    "kilo",
+    "kimi-code-cli",
+    "opencode",
+    "pi",
+    "warp",
+    "zed"
+  ]
+}
