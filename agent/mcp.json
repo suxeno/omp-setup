@@ -1,0 +1,32 @@
+{
+  "$schema": "https://raw.githubusercontent.com/can1357/oh-my-pi/main/packages/coding-agent/src/config/mcp-schema.json",
+  "mcpServers": {
+    "context7": {
+      "type": "http",
+      "url": "https://mcp.context7.com/mcp/oauth"
+    },
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@playwright/mcp@latest"
+      ],
+      "enabled": true
+    },
+    "outline": {
+      "type": "http",
+      "url": "https://outline.stickearn.net/mcp"
+    },
+    "atlassian": {
+      "type": "http",
+      "url": "https://mcp.atlassian.com/v2/mcp"
+    },
+    "metabase": {
+      "type": "http",
+      "url": "https://metabase.stickearn.app/api/metabase-mcp",
+      "oauth": {
+        "scope": "agent:resource:read agent:content:read agent:query:run agent:content:write agent:sql:run"
+      }
+    }
+  }
+}

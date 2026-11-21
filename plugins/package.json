@@ -1,0 +1,8 @@
+{
+  "name": "omp-plugins",
+  "private": true,
+  "dependencies": {
+    "pi-google-workspace": "npm:pi-google-workspace@^1.0.1",
+    "pi-mcp-adapter": "npm:pi-mcp-adapter@^5.3.2"
+  }
+}

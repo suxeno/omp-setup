@@ -1,0 +1,20 @@
+{
+  "plugins": {
+    "pi-mcp-adapter": {
+      "version": "5.3.2",
+      "enabledFeatures": null,
+      "enabled": true
+    },
+    "@dietrichgebert/ponytail": {
+      "version": "5.3.2",
+      "enabledFeatures": null,
+      "enabled": true
+    },
+    "pi-google-workspace": {
+      "version": "1.0.1",
+      "enabledFeatures": null,
+      "enabled": true
+    }
+  },
+  "settings": {}
+}

@@ -1,0 +1,63 @@
+setupVersion: 3
+modelRoles:
+  default: openai-codex/gpt-6.1-terra:medium
+  slow: openai-codex/gpt-6.1-sol:high
+  vision: openai-codex/gpt-6-luna:medium
+  plan: openai-codex/gpt-6.1-sol:high
+  commit: openrouter/openrouter/free:medium
+  task: openai-codex/gpt-6-luna:medium
+  advisor: openai-codex/gpt-6-astra:xhigh
+  smol: openai-codex/gpt-6-luna:medium
+  tiny: openrouter/openrouter/free:medium
+  memory: openrouter/openrouter/free:high
+  judge: opencode-zen/jev-1.13-free
+  dictation: local/whisper-large-v3-turbo
+defaultThinkingLevel: auto
+externalThinking: false
+modelRoleStorage: global
+skillful: true
+personality: pragmatic
+advisor:
+  enabled: false
+tools:
+  approvalMode: yolo
+stt:
+  enabled: true
+  submitTrigger: never
+git:
+  enabled: true
+autolearn:
+  enabled: true
+goal:
+  enabled: true
+secrets:
+  enabled: true
+task:
+  eager: preferred
+computer:
+  enabled: true
+github:
+  enabled: true
+dev:
+  autoqaConsent: granted
+codexResets:
+  autoRedeem5h: "yes"
+  autoRedeemWeekly: "yes"
+disabledProviders: []
+disabledExtensions: []
+browser:
+  headless: false
+steeringMode: one-at-a-time
+followUpMode: one-at-a-time
+tui:
+  vimMode: false
+edit:
+  mode: hashline
+theme:
+  dark: dark-catppuccin
+update:
+  auto: false
+startup:
+  quiet: true
+statusLine:
+  showHookStatus: false
