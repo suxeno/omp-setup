@@ -12,7 +12,7 @@ Private backup of OMP settings, MCP servers, skills, extensions, and plugin meta
    python3 restore.py
    ```
 
-   Close OMP first. Existing files are backed up under `~/omp-restore-*/backup/`. Plugin installation requires internet access.
+   Close OMP first. Existing files are backed up under `~/omp-restore-*/backup/`. Plugin installation requires internet access. Restore installs missing plugins, updates outdated npm plugins, and runs the marketplace plugin upgrade command whenever it is installed; that command does not force a reinstall. It requires the configured marketplace name `ponytail` to point to `DietrichGebert/ponytail` and stops if that name is occupied by another source. Repository-owned files are replaced after backup, while unrelated local files and configuration remain untouched.
 2. Start OMP, sign in with `/login`, and reconnect servers with `/mcp reauth <name>`.
 3. Check `/mcp list`, `/mcp test <name>`, and `omp plugin list`. Some plugins need separate sign-in or dependencies.
 
