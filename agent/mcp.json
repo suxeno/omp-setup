@@ -12,14 +12,6 @@
       "type": "http",
       "url": "https://mcp.context7.com/mcp/oauth"
     },
-    "playwright": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "@playwright/mcp@latest"
-      ],
-      "enabled": true
-    },
     "outline": {
       "type": "http",
       "url": "https://outline.stickearn.net/mcp"
