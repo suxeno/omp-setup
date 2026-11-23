@@ -37,7 +37,26 @@ Skills are OMP-scoped; `~/.agents/skills/` is untouched. The skill source metada
 
 ## Update the backup
 
-This is a snapshot, not automatic sync. Copy OMP settings from `~/.omp/agent/` into `agent/`. Copy skills into `skills/` and their source metadata into `skill-lock.json`; on the original device these are under `~/.agents/`. Update plugin metadata and restore commands when needed. Review for secrets, then commit and push.
+From this repository, run:
+
+```sh
+python3 update.py --dry-run   # preview changes
+python3 update.py             # copy local OMP state into this repository
+python3 update.py --commit    # copy and commit the snapshot
+python3 update.py --push      # copy, commit, and push to origin
+```
+
+The script mirrors these local paths:
+
+| Repository | Local source |
+| --- | --- |
+| `agent/config.yml`, `agent/mcp.json`, `agent/lsp.json` | matching files in `~/.omp/agent/` |
+| `agent/extensions/` | `~/.omp/agent/extensions/` |
+| `skills/` | `~/.omp/agent/skills/` |
+| `skill-lock.json` | `~/.omp/agent/.skill-lock.json` |
+| `plugins/` | `~/.omp/plugins/` (metadata and lockfiles only) |
+
+Skills and extensions removed locally are pruned from the repository by default; pass `--no-prune` to keep them. The script skips credentials, sessions, caches, databases, `node_modules`, and `.env` files. It does not update this README, `restore.py`, or `update.py`; review `git diff` for secrets before committing.
 
 ## What is not included
 
