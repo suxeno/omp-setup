@@ -61,4 +61,9 @@ startup:
   quiet: true
 statusLine:
   showHookStatus: false
+  separator: powerline
+  sessionAccent: true
+  transparent: false
 hideThinkingBlock: true
+composer:
+  shape: pi
